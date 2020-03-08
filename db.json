@@ -5,7 +5,7 @@
       "firstName": "Barry",
       "lastName": "Allen",
       "house": "DC",
-      "knownAs": "Flash!!"
+      "knownAs": ""
     },
     {
       "id": "1ggew732dw",
@@ -22,5 +22,13 @@
       "knownAs": "Batman"
     }
   ],
-  "villains": []
+  "villains": [
+    {
+      "id": 1,
+      "firstName": "kuga",
+      "lastName": "panna",
+      "house": "!!!",
+      "knownAs": ""
+    }
+  ]
 }

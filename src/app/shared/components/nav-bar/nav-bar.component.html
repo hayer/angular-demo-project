@@ -10,8 +10,14 @@
     </a>
   </li>
   <li [ngbNavItem]="2">
-    <a ngbNavLink routerLink="/">
+    <a ngbNavLink routerLink="/villains">
       Villains
     </a>
+  </li>
+  <li [ngbNavItem]="3">
+    <button class="btn btn-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+  </li>
+  <li [ngbNavItem]="3">
+    <button class="btn btn-primary" (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
   </li>
 </ul>
