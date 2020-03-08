@@ -111,7 +111,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: 'JD0W2DAOBwTEqfh4b4LH3j88zy19yw8k',
-        returnTo: `${window.location.origin}`,
+        returnTo: `https://ecstatic-wescoff-cdb447.netlify.com/`,
       });
     });
   }
