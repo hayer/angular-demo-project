@@ -14,13 +14,20 @@ export class HttpClientRxJSService {
     return this.http.get<Hero[]>(this.heroPath);
   }
 
-  // TODO: delete
+  // delete
   deleteHeroById(id: string): Observable<void> {
     return this.http.delete<void>(`${this.heroPath}/${id}`).pipe(
       // TODO: fix
     );
   }
 
-  // TODO: post
-  // TODO: put
+  // post
+  postHero(createdHero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(this.heroPath, createdHero);
+  }
+
+  // put
+  putHero(updatedHero: Hero): Observable<void> {
+    return this.http.put<void>(`${this.heroPath}/${updatedHero.id}`, updatedHero);
+  }
 }
