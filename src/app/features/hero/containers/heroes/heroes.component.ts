@@ -4,6 +4,7 @@ import { HttpClientRxJSService } from "../../../../core/services/httpClientRxJS.
 import { HttpErrorResponse } from "@angular/common/http";
 import { Subscription } from "rxjs";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { catchError } from "rxjs/operators";
 
 @Component({
   selector: "app-heroes",
@@ -55,6 +56,16 @@ export class HeroesComponent implements OnInit, OnDestroy {
       () => (this.isLoading = false)
     );
   }
+
+  // // optimistic update
+  // removeHero(id: string) {
+  //   const prevData: Hero[] = [...this.heroes];
+  //   this.heroes = this.heroes.filter(h => h.id !== id);
+  //   this.rxjsService.deleteHeroById(id).pipe(catchError((err: HttpErrorResponse) => {
+  //     console.log(err.statusText);
+  //     return (this.heroes = prevData);
+  //   }))
+  // }
 
   onSave() {
     alert("Hello");
